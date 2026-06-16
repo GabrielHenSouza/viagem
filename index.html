@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Viagem+</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>✈️ Viagem+</h1>
+  <nav>
+    <a href="#">Destinos</a>
+    <a href="#">Promoções</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Explore o mundo com a Viagem+</h2>
+  <p>As melhores viagens estão aqui</p>
+</section>
+
+<section class="busca">
+  <input type="text" id="buscarDestino" placeholder="Digite o destino">
+  <input type="number" id="buscarPreco" placeholder="Preço máximo (R$)">
+  
+  <select id="ordenar" onchange="ordenarPreco()">
+    <option value="">Ordenar por preço</option>
+    <option value="menor">Menor preço</option>
+    <option value="maior">Maior preço</option>
+  </select>
+
+  <button onclick="buscarViagem()">Buscar</button>
+</section>
+
+<section class="destinos">
+  <h2>Destinos</h2>
+  <div class="cards" id="listaDestinos"></div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">×</span>
+    <picture id="modalPicture">
+      <source id="modalSourceWebp" type="image/webp">
+      <img id="modalImg" alt="Imagem do destino">
+    </picture>
+    <h2 id="modalTitulo"></h2>
+    <p id="modalPreco"></p>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Viagem+ | Desenvolvido por Gabriel</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
